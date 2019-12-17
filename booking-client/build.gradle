@@ -16,11 +16,51 @@ dependencies {
 }
 
 jar {
-    archiveFileName = 'loan-client.jar' // name of the generated .jar file
+    archiveFileName = 'booking-client.jar' // name of the generated .jar file
 
     manifest {    // class where the main method is
         attributes 'Main-Class': mainClassName
     }
     // add all dependencies to the executable .jar file
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+task runBookingClient(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    //if you have error message about missing modules in java FX, uncomment this line:
+    // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
+    main = mainClassName
+}
+
+task createModelJar(type: Jar, dependsOn: compileJava) {
+    archiveFileName =  "clientModel.jar"
+
+    from sourceSets.main.output
+    include "booking.client/model/*", ""
+
+    println "created clientModel.jar from model/*.class"
+}
+task createMessageGatewayModelJar(type: Jar, dependsOn: compileJava) {
+    archiveFileName =  "messageGatewayModel.jar"
+
+    from sourceSets.main.output
+    include 'booking/client/model/MessagingReceiveGateway.class', 'booking/client/model/MessagingSendGateway.class'
+
+    println "created messageGatewayModel.jar from model/MessagingReceiveGateway,MessagingSendGateway.class"
+}
+
+task copyModelJarToMessageBroker(type: Copy,dependsOn:[createModelJar]) {
+
+    from "${buildDir}/libs/clientModel.jar"
+    into "../message-broker/lib/"
+
+    println "copied "+ "${buildDir}/libs/clientModel.jar" + " into " + "../message-broker/lib/"
+}
+
+task copyModelJarToTravelAgency(type: Copy,dependsOn:[createMessageGatewayModelJar]) {
+
+    from "${buildDir}/libs/messageGatewayModel.jar"
+    into "../travel-agency/lib/"
+
+    println "copied "+ "${buildDir}/libs/messageGatewayModel.jar" + " into " + "../travel-agency/lib/"
 }

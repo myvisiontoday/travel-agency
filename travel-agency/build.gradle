@@ -49,3 +49,21 @@ task runBUSINESS(type: JavaExec) {
     args "Business Tickets", "businessQueue"
 }
 
+task createModelJar(type: Jar, dependsOn: compileJava) {
+    archiveFileName =  "agencyModel.jar"
+
+    from sourceSets.main.output
+    include "travel-agency/booking/agency/model/*", ""
+
+    println "created agencyModel.jar from model/*.class"
+}
+
+task copyModelJarToMessageBroker(type: Copy,dependsOn:[createModelJar]) {
+
+    from "${buildDir}/libs/agencyModel.jar"
+    into "../message-broker/lib/"
+
+    println "copied "+ "${buildDir}/libs/agencyModel.jar" + " into " + "../message-broker/lib/"
+}
+
+

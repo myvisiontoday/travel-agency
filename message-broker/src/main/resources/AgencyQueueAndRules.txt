@@ -1,0 +1,3 @@
+cheapTicketsQueue|#{numberOfTravellers} > 2
+businessTicketsQueue|#{clientID} != null
+easyTicketsQueue|1.0

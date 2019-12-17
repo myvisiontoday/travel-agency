@@ -11,6 +11,8 @@ subprojects {
         // Logging
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.8.0-beta4'
         compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta4'
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: '5.15.10'
+        compile 'com.google.code.gson:gson:2.8.6'
     }
 
     version = '1.0'
