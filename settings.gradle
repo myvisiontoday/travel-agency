@@ -1,0 +1,5 @@
+rootProject.name = 'sai-travel-agency'
+include 'booking-client'
+include 'travel-agency'
+
+
