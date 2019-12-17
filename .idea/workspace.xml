@@ -2,63 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ac1bcf6-00f1-47f2-ad25-9a652a7bcbde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/classes/java/main/booking/client/gui/ClientController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/classes/java/main/booking/client/gui/ClientListViewLine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/classes/java/main/booking/client/gui/ClientMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/classes/java/main/booking/client/model/ClientBookingReply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/classes/java/main/booking/client/model/ClientBookingRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/resources/main/client.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/build/resources/main/client.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientListViewLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/ClientBookingReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/ClientBookingRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/resources/client.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/resources/client.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyListViewLine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyMain$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyMain$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/gui/AgencyMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/model/AgencyReply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/classes/java/main/booking/agency/model/AgencyRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/resources/main/agency.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/build/resources/main/agency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/gui/AgencyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/gui/AgencyListViewLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/gui/AgencyMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/model/AgencyReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/model/AgencyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/resources/agency.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/resources/agency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitIgnore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +97,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\SAI\SAI-final-assignment\sai-travel-agency" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.ClientMain">
     <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="booking.client.gui.ClientMain" />
@@ -214,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576575150939</updated>
-      <workItem from="1576575155487" duration="1361000" />
+      <workItem from="1576575155487" duration="1668000" />
     </task>
     <servers />
   </component>
