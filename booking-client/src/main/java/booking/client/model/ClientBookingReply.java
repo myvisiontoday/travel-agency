@@ -42,7 +42,7 @@ public class ClientBookingReply {
         this.agencyName = reasonRejected;
     }
     
-        public double getTotalPrice() {
+    public double getTotalPrice() {
         return totalPrice;
     }
 

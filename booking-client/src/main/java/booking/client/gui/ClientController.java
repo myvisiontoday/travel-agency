@@ -78,7 +78,7 @@ public class ClientController implements Initializable {
             ClientListViewLine listViewLine = new ClientListViewLine(request);
             this.lvLoanRequestReply.getItems().add(listViewLine);
 
-             // TODO: Send teh booking request
+             // TODO: Send the booking request
             clientAppGateway.requestBooking(request);
             logger.info("Send here the booking request: " + request);
         }

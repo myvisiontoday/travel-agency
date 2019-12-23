@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ac1bcf6-00f1-47f2-ad25-9a652a7bcbde" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitIgnore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitIgnore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/ApplicationGateway/ClientApplicationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/ApplicationGateway/ClientApplicationGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/ClientBookingReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/ClientBookingReply.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,7 @@
       <workItem from="1576575155487" duration="1668000" />
       <workItem from="1576590265112" duration="2877000" />
       <workItem from="1576604531402" duration="5627000" />
-      <workItem from="1577090834401" duration="9569000" />
+      <workItem from="1577090834401" duration="11390000" />
     </task>
     <servers />
   </component>
@@ -251,21 +253,25 @@
     </state>
     <state x="1450" y="-900" key="FileChooserDialogImpl/0.0.1600.860/1276.-1080.1536.824@1276.-1080.1536.824" timestamp="1577093924458" />
     <state x="181" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576596074137" />
-    <state width="1556" height="181" key="GridCell.Tab.0.bottom" timestamp="1577102978688">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1492" height="147" key="GridCell.Tab.0.bottom" timestamp="1577114804847">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1492" height="147" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577114804847" />
     <state width="1556" height="181" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
-    <state width="1556" height="181" key="GridCell.Tab.0.center" timestamp="1577102978688">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1492" height="147" key="GridCell.Tab.0.center" timestamp="1577114804847">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1492" height="147" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577114804847" />
     <state width="1556" height="181" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
-    <state width="1556" height="181" key="GridCell.Tab.0.left" timestamp="1577102978688">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1492" height="147" key="GridCell.Tab.0.left" timestamp="1577114804847">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1492" height="147" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577114804847" />
     <state width="1556" height="181" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
-    <state width="1556" height="181" key="GridCell.Tab.0.right" timestamp="1577102978688">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1492" height="147" key="GridCell.Tab.0.right" timestamp="1577114804847">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1492" height="147" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577114804847" />
     <state width="1556" height="181" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
     <state x="100" y="100" width="1400" height="700" key="dock-window-1" timestamp="1577103037079">
       <screen x="0" y="0" width="1600" height="860" />
@@ -275,5 +281,16 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="225" y="42" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1576590326841" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -70,7 +70,7 @@ public abstract class ClientApplicationGateway {
             Message message = messagingSendGateway.createMessage(requestMessage);
             message.setJMSReplyTo(messagingReceiveGateway.getReceiveDestination());
             messagingSendGateway.SendMessage(message);
-            requestMap.put(message.getJMSMessageID(), bookingRequest);
+            requestMap.put(bookingRequest.getId(), bookingRequest);
 
             logger.info("sent: " + bookingRequest + " with messageID: " + message.getJMSMessageID());
         } catch (JMSException e) {
