@@ -28,6 +28,11 @@ public class MessagingSendGateway {
         connection.start();
     }
 
+    /**
+     * sends the message to the queue
+     * @param message
+     * @throws JMSException
+     */
     public void SendMessage(Message message) throws JMSException {
         questionProducer.send(message);
     }

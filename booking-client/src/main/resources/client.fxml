@@ -27,10 +27,10 @@
     <GridPane fx:id="cbCustomerID" hgap="5.0" onMouseClicked="#cbCustomerIDClicked" vgap="5.0" BorderPane.alignment="CENTER">
       <Label text="origin" />
       <Label text="destination" GridPane.rowIndex="1" />
-      <Label text="nr of passangers" GridPane.rowIndex="2" />
+      <Label text="nr of passengers" GridPane.rowIndex="2" />
       <TextField fx:id="tfOrigin" promptText="origin airport" GridPane.columnIndex="1" />
       <TextField fx:id="tfDestination" promptText="destination airport" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField fx:id="tfNrPassangers" promptText="number of passangers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="tfNrPassengers" promptText="number of passengers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField fx:id="tfCustomerId" prefWidth="200.0" promptText="customer id" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" onAction="#btnSendLoanRequestClicked" prefHeight="25.0" prefWidth="152.0" text="send booking request" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <CheckBox fx:id="cbCustomerId" mnemonicParsing="false" onAction="#cbCustomerIDClicked" text="customer id" GridPane.columnIndex="0" GridPane.rowIndex="4" />

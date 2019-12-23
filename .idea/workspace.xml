@@ -2,37 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ac1bcf6-00f1-47f2-ad25-9a652a7bcbde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/ApplicationGateway/ClientApplicationGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/Discount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingReceiveGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingSendGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/lib/agencyModel.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/lib/clientModel.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/ScatterGather/AgencyRecipientList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/ScatterGather/AgencySender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/applicationGateways/AgencyBrokerGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/applicationGateways/ClientBrokerGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/enrichers/AdministrationGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/java/routers/DiscountRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-broker/src/main/resources/AgencyQueueAndRules.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/lib/messageGatewayModel.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel-agency/src/main/java/booking/agency/ApllicationGateway/BankApplicationGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-agency/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/travel-agency/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/ApplicationGateway/ClientApplicationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/ApplicationGateway/ClientApplicationGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/gui/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingReceiveGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingReceiveGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingSendGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/java/booking/client/model/MessagingSendGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-client/src/main/resources/client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-client/src/main/resources/client.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -86,7 +81,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sai-week1-4/sai-loanbroker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -104,7 +99,20 @@
       <recent name="C:\Users\User\Desktop\SAI\SAI-final-assignment\sai-travel-agency" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.travel-agency [copyModelJarToMessageBroker]">
+  <component name="RunManager" selected="Application.ClientMain">
+    <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="booking.client.gui.ClientMain" />
+      <module name="sai-travel-agency.booking-client.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="booking.client.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="travel-agency [copyModelJarToMessageBroker]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -136,25 +144,6 @@
         <option name="taskNames">
           <list>
             <option value="copyModelJarToTravelAgency" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="travel-agency [createMessageGatewayModelJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="createMessageGatewayModelJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClientMain" />
         <item itemvalue="Gradle.travel-agency [copyModelJarToMessageBroker]" />
         <item itemvalue="Gradle.travel-agency [createModelJar]" />
         <item itemvalue="Gradle.travel-agency [runBookingClient]" />
         <item itemvalue="Gradle.travel-agency [copyModelJarToTravelAgency]" />
-        <item itemvalue="Gradle.travel-agency [createMessageGatewayModelJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +223,8 @@
       <updated>1576575150939</updated>
       <workItem from="1576575155487" duration="1668000" />
       <workItem from="1576590265112" duration="2877000" />
-      <workItem from="1576604531402" duration="5344000" />
+      <workItem from="1576604531402" duration="5627000" />
+      <workItem from="1577090834401" duration="9273000" />
     </task>
     <servers />
   </component>
@@ -245,26 +235,47 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="181" y="188" key="FileChooserDialogImpl" timestamp="1576596074137">
+    <state x="882" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577098810765">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="882" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577098810765" />
+    <state x="206" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1577091603423">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="206" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1276.-1080.1536.824@0.0.1600.860" timestamp="1577091603423" />
+    <state x="148" y="144" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1577092510750">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="148" y="144" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1600.860/1276.-1080.1536.824@0.0.1600.860" timestamp="1577092510750" />
+    <state x="288" y="24" key="CommitChangelistDialog2" timestamp="1576621008821">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="288" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1576621008821" />
+    <state x="1450" y="-900" key="FileChooserDialogImpl" timestamp="1577093924458">
+      <screen x="1276" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="1450" y="-900" key="FileChooserDialogImpl/0.0.1600.860/1276.-1080.1536.824@1276.-1080.1536.824" timestamp="1577093924458" />
     <state x="181" y="188" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576596074137" />
-    <state width="1558" height="164" key="GridCell.Tab.0.bottom" timestamp="1576620937755">
+    <state width="1556" height="181" key="GridCell.Tab.0.bottom" timestamp="1577102978688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="164" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1576620937755" />
-    <state width="1558" height="164" key="GridCell.Tab.0.center" timestamp="1576620937754">
+    <state width="1556" height="181" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
+    <state width="1556" height="181" key="GridCell.Tab.0.center" timestamp="1577102978688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="164" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1576620937754" />
-    <state width="1558" height="164" key="GridCell.Tab.0.left" timestamp="1576620937753">
+    <state width="1556" height="181" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
+    <state width="1556" height="181" key="GridCell.Tab.0.left" timestamp="1577102978688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="164" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1576620937753" />
-    <state width="1558" height="164" key="GridCell.Tab.0.right" timestamp="1576620937754">
+    <state width="1556" height="181" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
+    <state width="1556" height="181" key="GridCell.Tab.0.right" timestamp="1577102978688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="164" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1576620937754" />
+    <state width="1556" height="181" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577102978688" />
+    <state x="100" y="100" width="1400" height="700" key="dock-window-1" timestamp="1577103037079">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="100" y="100" width="1400" height="700" key="dock-window-1/0.0.1600.860@0.0.1600.860" timestamp="1577103037079" />
     <state x="225" y="42" key="new project wizard" timestamp="1576590326841">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

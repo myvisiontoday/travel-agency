@@ -15,6 +15,11 @@ public class MessagingReceiveGateway {
     public MessagingReceiveGateway() {
     }
 
+    /**
+     * connects to the activemq server.
+     * @param MESSAGE_QUEUE
+     * @throws JMSException
+     */
     public MessagingReceiveGateway(String MESSAGE_QUEUE) throws JMSException {
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
 
@@ -28,12 +33,27 @@ public class MessagingReceiveGateway {
         connection.start();
     }
 
+    /**
+     * sets the message listener for the consumer message.
+     * @param messageListener
+     * @throws JMSException
+     */
     public void SetListener(MessageListener messageListener) throws JMSException {
         messageConsumer.setMessageListener(messageListener);
     }
+
+    /**
+     * returns the receive destination
+     * @return
+     */
     public Destination getReceiveDestination() {
         return receiveDestination;
     }
+
+    /**
+     * sets the receive destination
+     * @param receiveDestination
+     */
     public void setReceiveDestination(Destination receiveDestination) {
         this.receiveDestination = receiveDestination;
     }

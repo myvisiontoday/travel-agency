@@ -1,5 +1,6 @@
 package booking.client.gui;
 
+import booking.client.ApplicationGateway.ClientApplicationGateway;
 import booking.client.model.ClientBookingReply;
 import booking.client.model.ClientBookingRequest;
 import javafx.application.Platform;
@@ -9,6 +10,7 @@ import javafx.scene.control.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.jms.JMSException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -16,13 +18,14 @@ import java.util.UUID;
 
 public class ClientController implements Initializable {
     private final Logger logger = LoggerFactory.getLogger(getClass());
+    private ClientApplicationGateway clientAppGateway;
 
     @FXML
     private TextField tfOrigin;
     @FXML
     private TextField tfDestination;
     @FXML
-    private TextField tfNrPassangers;
+    private TextField tfNrPassengers;
     @FXML
     private TextField tfCustomerId;
     @FXML
@@ -33,8 +36,20 @@ public class ClientController implements Initializable {
     private ListView<ClientListViewLine> lvLoanRequestReply;
 
 
-    public ClientController(){
-
+    public ClientController() throws JMSException {
+        clientAppGateway = new ClientApplicationGateway() {
+            @Override
+            public void replyArrived(ClientBookingRequest bookingRequest, ClientBookingReply bookingReply) {
+                ClientListViewLine listViewLine = getRequestReply(bookingRequest);
+                listViewLine.setReply(bookingReply);
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        lvLoanRequestReply.refresh();
+                    }
+                });
+            }
+        };
     }
 
     @FXML
@@ -45,7 +60,7 @@ public class ClientController implements Initializable {
         String fromAirport = tfOrigin.getText();
         String toAirport = tfDestination.getText();
 
-        int nrTravellers = Integer.parseInt(this.tfNrPassangers.getText());
+        int nrTravellers = Integer.parseInt(this.tfNrPassengers.getText());
 
         LocalDate date = dpDate.getValue();
         if (fromAirport.isEmpty() || toAirport.isEmpty() || nrTravellers < 1 || date.isBefore(LocalDate.now())){
@@ -64,6 +79,7 @@ public class ClientController implements Initializable {
             this.lvLoanRequestReply.getItems().add(listViewLine);
 
              // TODO: Send teh booking request
+            clientAppGateway.requestBooking(request);
             logger.info("Send here the booking request: " + request);
         }
         } catch (NumberFormatException e){
@@ -105,7 +121,7 @@ public class ClientController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         tfOrigin.setText("Schiphol");
         tfDestination.setText("Heathrow");
-        tfNrPassangers.setText("3");
+        tfNrPassengers.setText("3");
         cbCustomerId.setSelected(false);
         tfCustomerId.setDisable(true);
         dpDate.setValue(LocalDate.now());
