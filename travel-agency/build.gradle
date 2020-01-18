@@ -12,7 +12,7 @@ application {
 }
 
 dependencies {
-
+    compile files(fileTree(dir: 'lib', includes: ['*.jar']))
 }
 
 jar {
@@ -30,7 +30,7 @@ task runEASY(type: JavaExec) {
     //if you have error message about missing modules in java FX, uncomment this line:
     // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
     main = mainClassName
-    args "Easy Tickets", "easyQueue"
+    args "Easy Tickets", "easyTicketsQueue"
 }
 
 task runCHEAP(type: JavaExec) {
@@ -38,7 +38,7 @@ task runCHEAP(type: JavaExec) {
     //if you have error message about missing modules in java FX, uncomment this line:
     // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
     main = mainClassName
-    args "Cheap Tickes", "cheapQueue"
+    args "Cheap Tickes", "cheapTicketsQueue"
 }
 
 task runBUSINESS(type: JavaExec) {
@@ -46,14 +46,14 @@ task runBUSINESS(type: JavaExec) {
     //if you have error message about missing modules in java FX, uncomment this line:
     // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
     main = mainClassName
-    args "Business Tickets", "businessQueue"
+    args "Business Tickets", "businessTicketsQueue"
 }
 
 task createModelJar(type: Jar, dependsOn: compileJava) {
     archiveFileName =  "agencyModel.jar"
 
     from sourceSets.main.output
-    include "travel-agency/booking/agency/model/*", ""
+    include "booking/agency/model/*"
 
     println "created agencyModel.jar from model/*.class"
 }

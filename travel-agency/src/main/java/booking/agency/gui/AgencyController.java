@@ -1,5 +1,6 @@
 package booking.agency.gui;
 
+import booking.agency.ApllicationGateway.AgencyApplicationGateway;
 import booking.agency.model.AgencyReply;
 import booking.agency.model.AgencyRequest;
 import javafx.application.Platform;
@@ -17,8 +18,8 @@ import java.util.UUID;
 
 public class AgencyController implements Initializable {
 
-     private String agencyName;
-
+    private String agencyName;
+    private AgencyApplicationGateway agencyApplicationGateway;
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
      @FXML
@@ -30,6 +31,19 @@ public class AgencyController implements Initializable {
 
     public AgencyController(String queueName, String agencyName){
         this.agencyName = agencyName;
+        this.agencyApplicationGateway = new AgencyApplicationGateway(queueName) {
+            @Override
+            public void brokerRequestArrived(AgencyRequest agencyRequest) {
+                //create the ListViewLine line with the request and add it to lvAgencyRequestReply
+                AgencyListViewLine listViewLine = new AgencyListViewLine(agencyRequest);
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        lvAgencyRequestReply.getItems().add(listViewLine);
+                    }
+                });
+            }
+        };
     }
 
     @FXML
@@ -49,6 +63,14 @@ public class AgencyController implements Initializable {
                     }
                 });
                 // TODO: send the agency reply
+                AgencyRequest agencyRequest = listViewLine.getRequest();
+                if(agencyRequest!=null)
+                {
+                    this.agencyApplicationGateway.sendReplyToBroker(agencyRequest.getId(), reply);
+                }
+                else
+                    logger.info("agencyRequest not found");
+
                 logger.info("Send here the reply: " + reply);
             } else {
                 showErrorMessageDialog("You have already sent reply for this request.");

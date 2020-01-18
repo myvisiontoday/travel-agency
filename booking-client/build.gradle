@@ -36,7 +36,7 @@ task createModelJar(type: Jar, dependsOn: compileJava) {
     archiveFileName =  "clientModel.jar"
 
     from sourceSets.main.output
-    include "booking.client/model/*", ""
+    include "booking/client/model/*"
 
     println "created clientModel.jar from model/*.class"
 }

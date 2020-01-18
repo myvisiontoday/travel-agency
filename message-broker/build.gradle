@@ -8,8 +8,15 @@ sourceCompatibility = 1.11
 
 repositories {
     mavenCentral()
+    flatDir { //include all *.jar files from local "lib" directory (e.g. clientModel.jar)
+        dirs 'lib'
+    }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.28'
+    compile group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.28'
+    compile group: 'net.sourceforge.jeval', name: 'jeval', version: '0.9.4'
+    compile files(fileTree(dir: 'lib', includes: ['*.jar']))
 }
