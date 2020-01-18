@@ -23,10 +23,13 @@ public class AgencySender {
         boolean check = false;
         evaluator.clearVariables();
         evaluator.putVariable("numberOfTravellers", Integer.toString(agencyRequest.getNrTravellers()));
-        evaluator.putVariable("isRegisteredClient", String.valueOf(agencyRequest.isRegisteredClient()));
-        //check = evaluator.evaluate(rule).equals("1.0");
-        check = true;
-        return true;
+        evaluator.putVariable("isRegisteredClient", Integer.toString(agencyRequest.isRegisteredClient() ? 1 : 0));
+        try {
+            check = evaluator.evaluate(rule).equals("1.0");
+        } catch (EvaluationException e) {
+            e.printStackTrace();
+        }
+        return check;
     }
 
     public MessagingSendGateway getSender(){
