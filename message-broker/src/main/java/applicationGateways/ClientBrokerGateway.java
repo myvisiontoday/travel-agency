@@ -4,8 +4,6 @@ import booking.administration.model.ClientProfile;
 import booking.administration.model.ClientType;
 import booking.agency.model.AgencyReply;
 import booking.client.model.*;
-import ScatterGather.AgencyRecipientList;
-import ScatterGather.AgencySender;
 import com.google.gson.Gson;
 import enrichers.AdministrationGateway;
 import org.slf4j.Logger;
@@ -56,7 +54,7 @@ public abstract class ClientBrokerGateway {
                         if(clientBookingRequest!=null)
                         {
                             clientBookingRequestMap.put(clientBookingRequest.getId(), clientBookingRequest);
-                            logger.info("request arrived" + clientBookingRequest);
+                            logger.info("request arrived " + clientBookingRequest.getOriginAirport());
                             clientRequestArrived(clientBookingRequest);
                         }
                     } catch (JMSException e) {
@@ -97,13 +95,11 @@ public abstract class ClientBrokerGateway {
 
         ClientBookingRequest bookingRequest = clientBookingRequestMap.get(replyId);
         clientID = bookingRequest.getClientID();
-        if (clientID!=0) {
-            clientProfile = administrationGateway.getClientProfile(clientID);
-            total_price = discountRouter.calculateTotalPrice(clientProfile, agencyReply.getPrice(), bookingRequest.getNumberOfTravellers());
-            clientBookingReply.setTotalPrice(total_price);
-        }
-        else
-            clientBookingReply.setTotalPrice(total_price);
+        clientProfile = administrationGateway.getClientProfile(clientID);
+        if(clientProfile != null)
+            clientProfile = new ClientProfile(ClientType.STANDARD, 0);
+        total_price = discountRouter.calculateTotalPrice(clientProfile, agencyReply.getPrice(), bookingRequest.getNumberOfTravellers());
+        clientBookingReply.setTotalPrice(total_price);
 
         //send back to client
         try {
@@ -112,7 +108,7 @@ public abstract class ClientBrokerGateway {
             Message message = messagingSendGateway.createMessage(reply);
             message.setJMSCorrelationID(replyId);
             messagingSendGateway.SendMessage(message);
-            logger.info(" reply sent to the client" + clientBookingReply);
+            logger.info(" reply sent to the client: bestPrice p.p" + clientBookingReply.getTotalPrice());
         } catch (JMSException e) {
             e.printStackTrace();
         }

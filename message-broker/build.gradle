@@ -1,11 +1,15 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 version 'unspecified'
 
 sourceCompatibility = 1.11
 
+application {
+    mainClassName = 'BrokerMain'
+}
 repositories {
     mavenCentral()
     flatDir { //include all *.jar files from local "lib" directory (e.g. clientModel.jar)
@@ -19,4 +23,11 @@ dependencies {
     compile group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.28'
     compile group: 'net.sourceforge.jeval', name: 'jeval', version: '0.9.4'
     compile files(fileTree(dir: 'lib', includes: ['*.jar']))
+}
+
+task runBROKER(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    //if you have error message about missing modules in java FX, uncomment this line:
+    // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
+    main = mainClassName
 }

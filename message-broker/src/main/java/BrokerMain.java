@@ -13,8 +13,6 @@ public class BrokerMain {
     private static AgencyBrokerGateway agencyBrokerGateway;
     private static ClientBrokerGateway clientBrokerGateway;
 
-    private Logger logger = LoggerFactory.getLogger(getClass());
-
     public static void main(String[] args) {
         System.out.println("*************** Message Broker ****************");
         clientBrokerGateway = new ClientBrokerGateway() {

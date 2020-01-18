@@ -42,6 +42,7 @@ public abstract class AgencyBrokerGateway {
     public AgencyBrokerGateway() {
         // Load rules from text file and add Travel agency queues to the @agencySenders
         this.loadFromTextFile();
+        logger.info("Agency queues and their rule is loaded from resources/AgencyQueueAndRules.txt");
 
         try {
             messagingReceiveGateway = new MessagingReceiveGateway(AGENCY_REPLY_QUEUE);
@@ -53,13 +54,14 @@ public abstract class AgencyBrokerGateway {
                         AgencyReply agencyReply = gson.fromJson(((TextMessage) message).getText(), AgencyReply.class);
                         String replyId = message.getJMSCorrelationID();
                         int aggregationID = message.getIntProperty("aggregationID");
+
                         // get reply aggregator
                         AgencyRecipientList agencyRecipientList = agencyReplyAggregators.get(aggregationID);
                         if(agencyRecipientList!=null)
                         {
                             //add the agency reply to the aggregator
                             agencyRecipientList.addReply(agencyReply, replyId);
-                            logger.info("agency reply arrived " + agencyReply + replyId);
+                            logger.info("agency reply arrived " + agencyReply.getName() + replyId);
 
                             if(agencyRecipientList.finish()) {
                                 AgencyReply bestReply = agencyRecipientList.findBestReply(); // find best reply
@@ -117,7 +119,7 @@ public abstract class AgencyBrokerGateway {
             AgencyRecipientList bankRecipientList = new AgencyRecipientList(nrOfRequest);
             agencyReplyAggregators.put(counter, bankRecipientList);
             counter++;
-            logger.info("Request is forwarded to the agency: " + clientBookingRequest + " id:" + clientBookingRequest.getId());
+            logger.info("Request is forwarded to the agency: " + clientBookingRequest.getOriginAirport() + " to:" + clientBookingRequest.getDestinationAirport());
 
         } catch (JMSException e) {
             e.printStackTrace();
@@ -138,7 +140,6 @@ public abstract class AgencyBrokerGateway {
                         //process the line
                         String[] results = line.split("\\|");
                         agencySenders.add(new AgencySender(results[0], results[1]));
-                        System.out.println(line);
                     }
                     br.close();
 

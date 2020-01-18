@@ -25,7 +25,7 @@ jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
-task runBookingClient(type: JavaExec) {
+task runBookingCLIENT(type: JavaExec) {
     classpath sourceSets.main.runtimeClasspath
     //if you have error message about missing modules in java FX, uncomment this line:
     // jvmArgs = ['--module-path', classpath.asPath,'--add-modules', 'javafx.controls,javafx.fxml']
