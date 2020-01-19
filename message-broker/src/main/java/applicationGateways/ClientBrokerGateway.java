@@ -78,7 +78,7 @@ public abstract class ClientBrokerGateway {
      */
     public void sendReplyToClient(AgencyReply agencyReply, String replyId) {
         int clientID = 0;
-        ClientProfile clientProfile;
+        ClientProfile clientProfile = null;
         double total_price = 0.0;
 
         if(agencyReply==null){
@@ -95,20 +95,26 @@ public abstract class ClientBrokerGateway {
 
         ClientBookingRequest bookingRequest = clientBookingRequestMap.get(replyId);
         clientID = bookingRequest.getClientID();
-        clientProfile = administrationGateway.getClientProfile(clientID);
-        if(clientProfile != null)
+
+        if(clientID!=0)
+            clientProfile = administrationGateway.getClientProfile(clientID);
+
+        //if clientProfile is null at this line. that means either the client is not registered or clientId is less than <100,
+        // then default clientProfile is assigned.
+        if(clientProfile == null)
             clientProfile = new ClientProfile(ClientType.STANDARD, 0);
+
         total_price = discountRouter.calculateTotalPrice(clientProfile, agencyReply.getPrice(), bookingRequest.getNumberOfTravellers());
         clientBookingReply.setTotalPrice(total_price);
 
-        //send back to client
+        //send clientBookingReply back to client
         try {
             Gson gson = new Gson();
             String reply = gson.toJson(clientBookingReply); // clientReply
             Message message = messagingSendGateway.createMessage(reply);
             message.setJMSCorrelationID(replyId);
             messagingSendGateway.SendMessage(message);
-            logger.info(" reply sent to the client: bestPrice p.p" + clientBookingReply.getTotalPrice());
+            logger.info(" reply sent to the client: bestPrice" + clientBookingReply.getTotalPrice());
         } catch (JMSException e) {
             e.printStackTrace();
         }

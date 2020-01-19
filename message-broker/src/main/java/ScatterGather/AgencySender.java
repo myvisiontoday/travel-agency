@@ -19,6 +19,13 @@ public class AgencySender {
         this.evaluator = new Evaluator();
         this.messagingSendGateway = new MessagingSendGateway(queueName);
     }
+
+    /**
+     * returns true if the AgencyRequest satisfies the rule which is passed through constructor.
+     * otherwise returns false.
+     * @param agencyRequest
+     * @return
+     */
     public boolean evaluateRequest(AgencyRequest agencyRequest) {
         boolean check = false;
         evaluator.clearVariables();
@@ -32,6 +39,10 @@ public class AgencySender {
         return check;
     }
 
+    /**
+     * returns the MessagingGateway for the agency queue supplied above in the constructor.
+     * @return
+     */
     public MessagingSendGateway getSender(){
         return messagingSendGateway;
     }

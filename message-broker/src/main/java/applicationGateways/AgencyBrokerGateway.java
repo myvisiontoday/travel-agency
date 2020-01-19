@@ -65,7 +65,7 @@ public abstract class AgencyBrokerGateway {
 
                             if(agencyRecipientList.finish()) {
                                 AgencyReply bestReply = agencyRecipientList.findBestReply(); // find best reply
-                                String bestReplyId = agencyRecipientList.getBestReplyId();
+                                String bestReplyId = agencyRecipientList.getBestReplyId(); // returns reply id for it's original request
                                 if(bestReply!=null) {
                                     agencyReplyArrived(bestReply, bestReplyId);
                                 }

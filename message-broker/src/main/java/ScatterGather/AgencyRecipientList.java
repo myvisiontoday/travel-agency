@@ -17,6 +17,13 @@ public class AgencyRecipientList {
         this.nrOfRequest = nrOfRequest;
         replyList = new ArrayList<>();
     }
+
+    /**
+     * adds AgencyRely to the list and also adds it's id and the replyId to the map.
+     * replyId is the id of original request.
+     * @param reply
+     * @param replyId
+     */
     public void addReply(AgencyReply reply, String replyId){
         replyList.add(reply);
         agencyReplyMap.put(reply.getId(), replyId);
@@ -28,6 +35,10 @@ public class AgencyRecipientList {
         return false;
     }
 
+    /**
+     * returns the AgencyReply with lowest fare price.
+     * @return
+     */
     public AgencyReply findBestReply()
     {
         AgencyReply bestAgencyReply = replyList.iterator().next();
@@ -43,6 +54,10 @@ public class AgencyRecipientList {
         return bestAgencyReply;
     }
 
+    /**
+     * returns the bestReplyId which is defined in findBestReply() method.
+     * @return
+     */
     public String getBestReplyId() {
         return bestReplyId;
     }
