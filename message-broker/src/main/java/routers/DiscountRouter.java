@@ -17,9 +17,7 @@ public class DiscountRouter {
      * @return
      */
     public double calculateTotalPrice(ClientProfile clientProfile, double agencyReplyPrice, double price) {
-
-        this.total_price = agencyReplyPrice * price * (1 - (clientProfile.getDiscount() / 100));
-
+        this.total_price = agencyReplyPrice * price * (1 - (clientProfile.getDiscount() / 100.0));
         return total_price;
     }
 }

@@ -1,5 +1,6 @@
 package booking.client.model;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 /**
@@ -7,6 +8,7 @@ import java.util.Objects;
  * This class stores all information about a client booking reply.
  */
 public class ClientBookingReply {
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     private String id;
     private String agencyName;
@@ -68,7 +70,7 @@ public class ClientBookingReply {
         return "ClientBookingReply{" +
                 "id='" + id + '\'' +
                 ", agencyName='" + agencyName + '\'' +
-                ", totalPrice=" + totalPrice +
+                ", totalPrice=" + df2.format(totalPrice) +
                 '}';
     }
 }

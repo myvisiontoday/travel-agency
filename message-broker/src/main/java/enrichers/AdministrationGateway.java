@@ -25,7 +25,7 @@ public class AdministrationGateway {
         // code to access webservice
         config = new ClientConfig();
         client = ClientBuilder.newClient(config);
-        baseURI = UriBuilder.fromUri("http://localhost:8080/credit/rest/history").build();
+        baseURI = UriBuilder.fromUri("http://localhost:8080/administration/rest/client").build();
         serviceTarget = client.target(baseURI);
     }
     public ClientProfile getClientProfile(int clientID){

@@ -98,12 +98,12 @@ public abstract class ClientBrokerGateway {
 
         if(clientID!=0)
             clientProfile = administrationGateway.getClientProfile(clientID);
-
         //if clientProfile is null at this line. that means either the client is not registered or clientId is less than <100,
         // then default clientProfile is assigned.
         if(clientProfile == null)
             clientProfile = new ClientProfile(ClientType.STANDARD, 0);
 
+        logger.info(clientProfile.toString());
         total_price = discountRouter.calculateTotalPrice(clientProfile, agencyReply.getPrice(), bookingRequest.getNumberOfTravellers());
         clientBookingReply.setTotalPrice(total_price);
 
